@@ -1,7 +1,68 @@
 .App {
+  height: 100vh;
+  width: 100vw;
+
   .AppGridContainer {
     display: grid;
-    grid-template-columns: 40px 50px auto 50px 40px;
-    grid-template-rows: 25% 100px auto;
+    grid-template-columns: 32px auto 32px;
+    grid-template-rows: 64px auto 32px;
+    height: 100vh;
+    width: 100vw;
+
+    .Navbar {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      display: grid;
+      grid-template-columns: 32px 32px 32px 32px auto 32px;
+      grid-template-rows: 16px auto 16px;
+
+      background-color: #292929;
+
+      .NavbarWaffle {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 32px;
+        height: 32px;
+
+        text-align: center;
+
+        border-radius: 8px;
+        box-shadow: 0 0 0 3px #a3a3a3;
+
+        .NavbarWaffleIcon {
+          font-size: 32px;
+        }
+      }
+
+      .NavbarHome {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 32px;
+        height: 32px;
+
+        text-align: center;
+
+        border-radius: 16px;
+        box-shadow: 0 0 0 3px #a3a3a3;
+
+        .NavbarHomeIcon {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .AppGridItem {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
   }
 }
