@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       <div className="AppGridContainer">
+        <div className="Serverbar"></div>
         <div className="Navbar">
           <div className="NavbarHome NavbarCircleBorder noselect">
             <i className="material-icons-round NavbarIcon noselect">home</i>
