@@ -16,45 +16,64 @@
       grid-row-end: 2;
 
       display: grid;
-      grid-template-columns: 32px 32px 32px 32px auto 32px;
+      grid-template-columns: 16px 32px auto 32px 16px 32px 16px 32px 16px;
       grid-template-rows: 16px auto 16px;
 
       background-color: #292929;
 
-      .NavbarWaffle {
-        grid-column-start: 2;
-        grid-column-end: 3;
+      .NavbarIcon {
+        font-size: 32px;
+      }
+
+      .NavbarIcon:hover {
+        color: #525252;
+        cursor: pointer;
+      }
+
+      .NavbarIcon:active {
+        cursor: pointer;
+        color: #3d3d3d;
+      }
+
+      .NavbarCircleBorder {
+        border-radius: 16px;
+        box-shadow: 0 0 0 3px #a3a3a3;
+      }
+
+      .NavbarSettings {
+        grid-column-start: 8;
+        grid-column-end: 9;
         grid-row-start: 2;
         grid-row-end: 3;
         width: 32px;
         height: 32px;
-
-        text-align: center;
-
-        border-radius: 8px;
-        box-shadow: 0 0 0 3px #a3a3a3;
-
-        .NavbarWaffleIcon {
-          font-size: 32px;
-        }
       }
 
-      .NavbarHome {
+      .NavbarLightMode {
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 32px;
+        height: 32px;
+      }
+
+      .NavbarAccountSettings {
         grid-column-start: 4;
         grid-column-end: 5;
         grid-row-start: 2;
         grid-row-end: 3;
         width: 32px;
         height: 32px;
+      }
 
-        text-align: center;
-
-        border-radius: 16px;
-        box-shadow: 0 0 0 3px #a3a3a3;
-
-        .NavbarHomeIcon {
-          font-size: 32px;
-        }
+      .NavbarHome {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 32px;
+        height: 32px;
       }
     }
 

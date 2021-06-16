@@ -25,3 +25,5 @@ yarn-error.log*
 
 .firebase/**/**
 .vscode/**/**
+
+firebase.debug.log
