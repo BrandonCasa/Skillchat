@@ -1,2 +1,98 @@
+@import "./mixins.scss";
+
 .App {
+  height: 100vh;
+  width: 100vw;
+  nav {
+    @include noselect;
+
+    width: 100%;
+    padding: 12px 0px;
+    background: #1a1a1a;
+    box-shadow: -3px -3px 7px #262626, 3px 3px 5px #121212;
+
+    .menu {
+      max-width: 100%;
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      ul {
+        list-style: none;
+        display: flex;
+
+        .navbutton {
+          margin: 0px 8px;
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 700;
+          color: #808080;
+          display: inline-flex;
+          padding: 10px 12px;
+          border-radius: 8px;
+          box-shadow: -3px -3px 7px #262626, 3px 3px 5px #0d0d0d;
+          position: relative;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+        .navbutton:hover:before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          border-radius: 8px;
+          box-shadow: inset -3px -3px 7px #262626, inset 3px 3px 5px #0d0d0d;
+        }
+        .navbutton:hover {
+          color: #3498db;
+        }
+      }
+
+      .logo {
+        display: flex;
+
+        .navbutton {
+          padding: 0 8px;
+
+          svg {
+            cursor: pointer;
+            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            box-shadow: -3px -3px 7px #262626, 3px 3px 5px #0d0d0d;
+
+            path {
+              fill: #808080;
+              stroke: #808080;
+            }
+            circle {
+              fill: #808080;
+              stroke: #808080;
+            }
+          }
+          svg:hover {
+            cursor: pointer;
+            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            box-shadow: -3px -3px 7px #262626, 3px 3px 5px #0d0d0d;
+
+            path {
+              fill: #3498db;
+              stroke: #3498db;
+            }
+            circle {
+              fill: #3498db;
+              stroke: #3498db;
+            }
+          }
+        }
+      }
+    }
+  }
 }
