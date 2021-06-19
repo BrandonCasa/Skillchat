@@ -10,6 +10,12 @@
     padding: 12px 0px;
     background: #1a1a1a;
     box-shadow: -3px -3px 7px #262626, 3px 3px 5px #121212;
+    transition: all 0.3s ease;
+
+    @media (max-width: 940px) {
+      height: 32px;
+      padding: 4px 0px;
+    }
 
     .menu {
       max-width: 100%;
@@ -18,9 +24,14 @@
       justify-content: space-between;
       align-items: center;
 
+      @media (max-width: 940px) {
+        padding: 0 8px;
+      }
+
       ul {
         list-style: none;
         display: flex;
+        margin: 0px;
 
         .navbutton {
           margin: 0px 8px;
@@ -35,8 +46,13 @@
           position: relative;
           transition: all 0.3s ease;
           cursor: pointer;
+
+          @media (max-width: 940px) {
+            padding: 4px 12px;
+            font-size: 12px;
+          }
         }
-        .navbutton:hover:before {
+        .navbutton:hover::before {
           content: "";
           position: absolute;
           top: 0px;
@@ -66,6 +82,12 @@
             height: 48px;
             display: flex;
             box-shadow: -3px -3px 7px #262626, 3px 3px 5px #0d0d0d;
+            transition: all 0.3s ease;
+
+            @media (max-width: 940px) {
+              width: 32px;
+              height: 32px;
+            }
 
             path {
               fill: #808080;
@@ -85,6 +107,12 @@
             height: 48px;
             display: flex;
             box-shadow: -3px -3px 7px #262626, 3px 3px 5px #0d0d0d;
+            transition: all 0.3s ease;
+
+            @media (max-width: 940px) {
+              width: 32px;
+              height: 32px;
+            }
 
             path {
               fill: #3498db;
