@@ -45,9 +45,11 @@
           bottom: 0px;
           border-radius: 8px;
           box-shadow: inset -3px -3px 7px #262626, inset 3px 3px 5px #0d0d0d;
+          transition: all 0.3s ease;
         }
         .navbutton:hover {
           color: #3498db;
+          transition: all 0.3s ease;
         }
       }
 
@@ -68,10 +70,12 @@
             path {
               fill: #808080;
               stroke: #808080;
+              transition: all 0.3s ease;
             }
             circle {
               fill: #808080;
               stroke: #808080;
+              transition: all 0.3s ease;
             }
           }
           svg:hover {
@@ -85,10 +89,12 @@
             path {
               fill: #3498db;
               stroke: #3498db;
+              transition: all 0.3s ease;
             }
             circle {
               fill: #3498db;
               stroke: #3498db;
+              transition: all 0.3s ease;
             }
           }
         }
