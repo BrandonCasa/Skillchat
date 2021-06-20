@@ -1,31 +1,16 @@
 import React from "react";
 import "./App.scss";
-import { ReactComponent as SiteLogo } from "./logo.svg";
+import Navbar from "./components/navbar/Navbar";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <nav>
-          <div className="menu">
-            <div className="logo">
-              <div className="navbutton">
-                <SiteLogo />
-              </div>
-            </div>
-            <ul>
-              <li>
-                <div className="navbutton">Home</div>
-              </li>
-              <li>
-                <div className="navbutton">Social</div>
-              </li>
-              <li>
-                <div className="navbutton">Settings</div>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Navbar />
+        <div className="maincontent">
+          <div className="friendactivity"></div>
+          <div className="notificationhistory"></div>
+        </div>
       </div>
     );
   }
