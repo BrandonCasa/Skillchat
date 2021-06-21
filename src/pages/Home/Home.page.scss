@@ -3,10 +3,9 @@
   height: 100%;
 
   > .maincontent {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100%;
 
     > div {
       border-radius: 16px;
@@ -61,19 +60,15 @@
     > .notificationbox {
       min-width: 300px;
       max-height: 500px;
-      max-width: 500px;
-
-      .notification {
-      }
+      max-width: 600px;
+      min-height: 300px;
     }
 
     > .friendsbox {
-      min-width: 250px;
+      min-width: 350px;
       max-height: 500px;
-
-      .friend {
-        height: 48px;
-      }
+      max-width: 800px;
+      min-height: 300px;
     }
   }
 }
