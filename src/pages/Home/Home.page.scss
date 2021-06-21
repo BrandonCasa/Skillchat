@@ -1,0 +1,21 @@
+.Home {
+  width: 100%;
+  height: 100%;
+
+  > .maincontent {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+
+    > .notificationbox {
+      flex-grow: 1;
+      margin: 8px;
+    }
+
+    > .friendsbox {
+      flex-grow: 1;
+      margin: 8px;
+    }
+  }
+}

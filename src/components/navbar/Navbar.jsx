@@ -30,7 +30,9 @@ function App() {
             </div>
           </li>
           <li>
-            <div className="navbutton">Settings</div>
+            <div className="navbutton" onClick={() => navigate("/settings")}>
+              Settings
+            </div>
           </li>
         </ul>
       </div>

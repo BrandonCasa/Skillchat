@@ -11,9 +11,8 @@ class App extends React.Component {
         <Navbar />
         <div className="maincontent">
           <Switch>
-            <Route path="/">
-              <HomePage />
-            </Route>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/social">Social Page</Route>
           </Switch>
         </div>
       </div>
