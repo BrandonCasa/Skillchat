@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 
 class App extends React.Component {
   render() {
