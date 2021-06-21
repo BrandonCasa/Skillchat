@@ -19,8 +19,32 @@ code {
 hr.solidborder {
   display: block;
   border: 0;
-  border-top: 3px solid #808080;
-  margin: 0.5em 0;
+  border-top: 3px solid #4d4d4d;
+  margin: 16px;
   border-radius: 1.5px;
   padding: 0;
+}
+
+hr.border-inset {
+  margin: 16px 32px;
+}
+
+hr.border-lighter-1 {
+  border-color: #5e5e5e;
+}
+hr.border-lighter-2 {
+  border-color: #6f6f6f;
+}
+hr.border-lighter-3 {
+  border-color: #808080;
+}
+
+hr.border-darker-1 {
+  border-color: #3c3c3c;
+}
+hr.border-darker-2 {
+  border-color: #2b2b2b;
+}
+hr.border-darker-3 {
+  border-color: #1a1a1a;
 }

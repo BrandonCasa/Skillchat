@@ -1,0 +1,30 @@
+.notification {
+  display: inline-flex;
+  flex-direction: row;
+
+  .avatar {
+    height: 48px;
+    width: 48px;
+    flex-shrink: 0;
+    background-color: #3c3c3c;
+    border-radius: 24px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .content {
+    display: inline-flex;
+    flex-direction: column;
+
+    .username {
+      font-size: 16px;
+    }
+
+    .message {
+      font-size: 12px;
+      flex-grow: 1;
+    }
+  }
+}

@@ -17,6 +17,23 @@
       display: inline-flex;
       flex-direction: column;
 
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(0deg, #6f6f6f 32%, #4d4d4d 64%);
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(0deg, #808080 32%, #5e5e5e 64%);
+      }
+      ::-webkit-scrollbar-track {
+        background: #3c3c3c;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 8px #1a1a1a;
+      }
+
       > .title {
         font-size: 20px;
         font-weight: 700;
@@ -24,16 +41,39 @@
         height: max-content;
         text-align: center;
       }
+
+      > .maincontent {
+        flex-grow: 1;
+        display: inline-flex;
+        padding: 8px;
+        overflow-y: scroll;
+
+        ul {
+          list-style: none;
+          flex-direction: column;
+          margin: 0px;
+          padding: 0px;
+          flex-grow: 1;
+        }
+      }
     }
 
     > .notificationbox {
       min-width: 300px;
       max-height: 500px;
+      max-width: 500px;
+
+      .notification {
+      }
     }
 
     > .friendsbox {
       min-width: 250px;
       max-height: 500px;
+
+      .friend {
+        height: 48px;
+      }
     }
   }
 }
