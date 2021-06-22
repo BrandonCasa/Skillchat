@@ -13,7 +13,7 @@ function NotificationComponent() {
 
   return (
     <div className="notification">
-      <img className="avatar" src={myself.avatarUrl} />
+      <img className="avatar" src={myself.avatarUrl} alt="Err" />
       <div className="content">
         <div className="username">{myself.displayName}</div>
         <div className="message">

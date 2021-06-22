@@ -1,11 +1,11 @@
 import React from "react";
 import "./Home.page.scss";
 import NotificationComponent from "../../components/notification/Notification.component";
-import { useFirestore, useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
+import { useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
 import { useSelector } from "react-redux";
 
 function HomePage() {
-  const firestore = useFirestore();
+  //const firestore = useFirestore();
 
   // Auth state
   const auth = useSelector((state) => state.firebase.auth);

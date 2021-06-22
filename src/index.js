@@ -7,9 +7,9 @@ import { BrowserRouter } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
-import { createStore, combineReducers } from "redux";
-import { ReactReduxFirebaseProvider, firebaseReducer } from "react-redux-firebase";
-import { createFirestoreInstance, firestoreReducer } from "redux-firestore";
+import { createStore } from "redux";
+import { ReactReduxFirebaseProvider } from "react-redux-firebase";
+import { createFirestoreInstance } from "redux-firestore";
 import { Provider } from "react-redux";
 import { rootReducer } from "./reducers";
 
