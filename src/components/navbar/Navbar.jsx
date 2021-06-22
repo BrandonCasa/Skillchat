@@ -3,7 +3,7 @@ import "./Navbar.scss";
 import { ReactComponent as SiteLogo } from "../../logo.svg";
 import { useHistory } from "react-router-dom";
 
-function App() {
+function Navbar() {
   let history = useHistory();
 
   function navigate(href) {
@@ -40,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default Navbar;
