@@ -36,7 +36,7 @@ function Navbar() {
     if (isLoaded(auth) && !isEmpty(auth)) {
       return (
         <li>
-          <div className="navbutton loginbtn" onClick={() => logout()}>
+          <div className="navbutton logoutbtn" onClick={() => logout()}>
             Logout
           </div>
         </li>
@@ -44,7 +44,7 @@ function Navbar() {
     } else {
       return (
         <li>
-          <div className="navbutton loginbtn" onClick={() => loginGoogle()}>
+          <div className="navbutton" onClick={() => loginGoogle()}>
             Login
           </div>
         </li>

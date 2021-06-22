@@ -7,8 +7,12 @@ import { useSelector } from "react-redux";
 function HomePage() {
   const firestore = useFirestore();
 
-  useFirestoreConnect(() => [{ collection: "users", doc: "3TSl0gBerLQfCfX6Uz6n" }]);
-  const myuser = useSelector(({ firestore: { data } }) => data.users && data.users["3TSl0gBerLQfCfX6Uz6n"]);
+  // Auth state
+  const auth = useSelector((state) => state.firebase.auth);
+
+  // Get user doc
+  useFirestoreConnect(() => [{ collection: "users", doc: auth.uid }]);
+  const myuser = useSelector(({ firestore: { data } }) => data.users && data.users[auth.uid]);
 
   let notificationContent = "ERROR";
 
