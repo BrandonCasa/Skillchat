@@ -7,16 +7,15 @@ import { useSelector } from "react-redux";
 function HomePage() {
   const firestore = useFirestore();
 
-  useFirestoreConnect(["users"]);
-
-  const users = useSelector((state) => state.firestore.ordered.users);
+  useFirestoreConnect(() => [{ collection: "users", doc: "3TSl0gBerLQfCfX6Uz6n" }]);
+  const myuser = useSelector(({ firestore: { data } }) => data.users && data.users["3TSl0gBerLQfCfX6Uz6n"]);
 
   let notificationContent = "ERROR";
 
-  if (!isLoaded(users)) {
+  if (!isLoaded(myuser)) {
     notificationContent = "Loading...";
   } else {
-    if (isEmpty(users)) {
+    if (isEmpty(myuser)) {
       notificationContent = "All caught up!";
     }
   }
@@ -32,10 +31,11 @@ function HomePage() {
               <li>
                 <NotificationComponent />
               </li>
-              <hr class="solidborder border-inset border-darker-2" />
+              <hr className="solidborder border-inset border-darker-2" />
               <li>
                 <NotificationComponent />
               </li>
+              <li>{JSON.stringify(myuser)}</li>
             </ul>
           </div>
         </div>

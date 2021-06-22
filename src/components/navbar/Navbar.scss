@@ -6,7 +6,7 @@ nav {
   width: 100%;
   padding: 12px 0px;
   background: #1a1a1a;
-  box-shadow: -3px -3px 7px #262626, 3px 3px 5px #121212;
+  box-shadow: -3px -3px 5px #262626, 3px 3px 5px #121212;
   transition: all 0.3s ease;
 
   @media (max-width: 450px) {
@@ -39,7 +39,7 @@ nav {
         display: inline-flex;
         padding: 10px 12px;
         border-radius: 8px;
-        box-shadow: -3px -3px 7px #262626, 3px 3px 5px #0d0d0d;
+        box-shadow: -3px -3px 5px #262626, 3px 3px 5px #0d0d0d;
         position: relative;
         transition: all 0.3s ease;
         cursor: pointer;
@@ -49,6 +49,12 @@ nav {
           font-size: 12px;
         }
       }
+
+      .loginbtn {
+        font-size: 16px;
+        padding: 4px 8px;
+      }
+
       .navbutton:hover::before {
         content: "";
         position: absolute;
@@ -57,7 +63,7 @@ nav {
         right: 0px;
         bottom: 0px;
         border-radius: 8px;
-        box-shadow: inset -3px -3px 7px #262626, inset 3px 3px 5px #0d0d0d;
+        box-shadow: inset -3px -3px 5px #262626, inset 3px 3px 5px #0d0d0d;
         transition: all 0.3s ease;
       }
       .navbutton:hover {
@@ -78,7 +84,7 @@ nav {
           width: 48px;
           height: 48px;
           display: flex;
-          box-shadow: -3px -3px 7px #262626, 3px 3px 5px #0d0d0d;
+          box-shadow: -3px -3px 5px #262626, 3px 3px 5px #0d0d0d;
           transition: all 0.3s ease;
 
           @media (max-width: 450px) {
@@ -103,7 +109,7 @@ nav {
           width: 48px;
           height: 48px;
           display: flex;
-          box-shadow: -3px -3px 7px #262626, 3px 3px 5px #0d0d0d;
+          box-shadow: -3px -3px 5px #262626, 3px 3px 5px #0d0d0d;
           transition: all 0.3s ease;
 
           @media (max-width: 450px) {

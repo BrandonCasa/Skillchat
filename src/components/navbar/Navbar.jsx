@@ -2,12 +2,54 @@ import React from "react";
 import "./Navbar.scss";
 import { ReactComponent as SiteLogo } from "../../logo.svg";
 import { useHistory } from "react-router-dom";
+import { useFirebase, isLoaded, isEmpty } from "react-redux-firebase";
+import { useSelector } from "react-redux";
 
 function Navbar() {
-  let history = useHistory();
+  const firebase = useFirebase();
+  const history = useHistory();
+
+  function loginGoogle() {
+    firebase
+      .login({
+        provider: "google",
+        type: "popup",
+      })
+      .then(() => {
+        history.push("/");
+      });
+  }
+
+  function logout() {
+    firebase.logout().then(() => {
+      history.push("/");
+    });
+  }
 
   function navigate(href) {
     history.push(href);
+  }
+
+  const auth = useSelector((state) => state.firebase.auth);
+
+  function LoginLogoutButton() {
+    if (isLoaded(auth) && !isEmpty(auth)) {
+      return (
+        <li>
+          <div className="navbutton loginbtn" onClick={() => logout()}>
+            Logout
+          </div>
+        </li>
+      );
+    } else {
+      return (
+        <li>
+          <div className="navbutton loginbtn" onClick={() => loginGoogle()}>
+            Login
+          </div>
+        </li>
+      );
+    }
   }
 
   return (
@@ -20,7 +62,7 @@ function Navbar() {
         </div>
         <ul>
           <li>
-            <div className="navbutton" onClick={() => navigate("/")}>
+            <div className="navbutton" onClick={() => navigate("/home")}>
               Home
             </div>
           </li>
@@ -34,6 +76,7 @@ function Navbar() {
               Settings
             </div>
           </li>
+          <LoginLogoutButton />
         </ul>
       </div>
     </nav>
