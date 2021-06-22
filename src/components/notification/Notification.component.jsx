@@ -1,12 +1,21 @@
 import React from "react";
 import "./Notification.component.scss";
+import { useSelector } from "react-redux";
+import { useFirestoreConnect } from "react-redux-firebase";
 
 function NotificationComponent() {
+  // Auth state
+  const auth = useSelector((state) => state.firebase.auth);
+
+  // Get user doc
+  useFirestoreConnect(() => [{ collection: "users", doc: auth.uid }]);
+  const myself = useSelector(({ firestore: { data } }) => data.users && data.users[auth.uid]);
+
   return (
     <div className="notification">
-      <div className="avatar">KC</div>
+      <img className="avatar" src={myself.avatarUrl} />
       <div className="content">
-        <div className="username">Kanna Codes</div>
+        <div className="username">{myself.displayName}</div>
         <div className="message">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada ex non odio facilisis ultrices. Praesent nec placerat ante. Morbi viverra lectus non velit convallis suscipit.
           Curabitur sodales quis purus id hendrerit. Sed nec dictum enim. Donec id dapibus odio. Nulla bibendum tortor odio, eu sagittis nibh pretium eget. Pellentesque tristique fermentum nulla, in

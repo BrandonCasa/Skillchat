@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.page.scss";
 import NotificationComponent from "../../components/notification/Notification.component";
-import { useFirebase, useFirestore, useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
+import { useFirestore, useFirestoreConnect, isLoaded, isEmpty } from "react-redux-firebase";
 import { useSelector } from "react-redux";
 
 function HomePage() {
@@ -39,7 +39,6 @@ function HomePage() {
               <li>
                 <NotificationComponent />
               </li>
-              <li>{JSON.stringify(myuser)}</li>
             </ul>
           </div>
         </div>
