@@ -31,6 +31,7 @@ function App() {
             <BaseRoute />
           </Route>
           <PrivateRoute path="/social">Social Page</PrivateRoute>
+          <PrivateRoute path="/settings">Settings Page</PrivateRoute>
         </Switch>
       </div>
     </div>
