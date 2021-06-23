@@ -7,6 +7,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import { useFirebase, isLoaded, isEmpty } from "react-redux-firebase";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import LandingPage from "./pages/Landing/Landing.page";
 
 function App() {
   const firebase = useFirebase();
@@ -18,7 +19,7 @@ function App() {
     if (isLoaded(auth) && !isEmpty(auth)) {
       return <HomePage />;
     } else {
-      return "Welcome to skillchat, please login!";
+      return <LandingPage />;
     }
   }
 
