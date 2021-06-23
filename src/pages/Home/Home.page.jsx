@@ -10,20 +10,18 @@ function HomePage() {
   // Auth state
   const auth = useSelector((state) => state.firebase.auth);
 
-  // Get user doc
+  // Get a user's doc
+  /*
   useFirestoreConnect(() => [{ collection: "users", doc: auth.uid }]);
   const myuser = useSelector(({ firestore: { data } }) => data.users && data.users[auth.uid]);
+  */
+
+  const profile = useSelector((state) => state.firebase.profile);
 
   let notificationContent = "ERROR";
-
-  if (!isLoaded(myuser)) {
+  if (!isLoaded(profile) || isEmpty(profile)) {
     notificationContent = "Loading...";
-  } else {
-    if (isEmpty(myuser)) {
-      notificationContent = "All caught up!";
-    }
   }
-
   function NotificationBox() {
     if (notificationContent === "ERROR") {
       return (

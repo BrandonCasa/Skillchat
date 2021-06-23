@@ -44,7 +44,7 @@ function Navbar() {
     } else {
       return (
         <li>
-          <div className="navbutton" onClick={() => loginGoogle()}>
+          <div className="navbutton logoutbtn" onClick={() => loginGoogle()}>
             Login
           </div>
         </li>
