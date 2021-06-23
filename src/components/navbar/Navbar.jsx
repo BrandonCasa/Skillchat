@@ -16,7 +16,7 @@ function Navbar() {
         type: "popup",
       })
       .then(() => {
-        history.push("/");
+        history.push("/home");
       });
   }
 
