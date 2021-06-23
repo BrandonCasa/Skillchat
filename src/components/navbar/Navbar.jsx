@@ -16,7 +16,7 @@ function Navbar() {
         type: "popup",
       })
       .then(() => {
-        history.push("/home");
+        history.push("/");
       });
   }
 
@@ -62,7 +62,7 @@ function Navbar() {
         </div>
         <ul>
           <li>
-            <div className="navbutton" onClick={() => navigate("/home")}>
+            <div className="navbutton" onClick={() => navigate("/")}>
               Home
             </div>
           </li>
