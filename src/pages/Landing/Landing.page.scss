@@ -5,7 +5,37 @@
   > .maincontent {
     display: flex;
     flex-wrap: wrap;
-    height: 3000px;
     width: 100%;
+    height: 100%;
+
+    .video {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      .title {
+        text-align: center;
+        width: 100%;
+        font-size: 48px;
+        font-weight: 700;
+        flex-grow: 1;
+      }
+      video {
+        width: 100%;
+        height: auto;
+      }
+      .chevrons {
+        flex-grow: 1;
+      }
+    }
+
+    .information {
+      margin-top: 8px;
+      height: 500px;
+      width: 100%;
+    }
   }
 }
