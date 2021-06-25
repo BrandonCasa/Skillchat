@@ -18,8 +18,11 @@ function LandingPage() {
         <div className="videocont">
           <video src={vid} width="100%" height="100%" type="video/x-webm" autoPlay muted loop style={vidVis ? {} : { display: "none" }}></video>
           <video id="steamvid" src={steam} width="100%" height="100%" muted></video>
+          <div className="overlay">
+            <div className="title">Please login to enjoy social features, more information below.</div>
+          </div>
         </div>
-        <div className="information"></div>
+        <div className="information">xd no info</div>
       </div>
     </div>
   );
