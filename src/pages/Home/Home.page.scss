@@ -16,23 +16,6 @@
       display: inline-flex;
       flex-direction: column;
 
-      ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: linear-gradient(0deg, #6f6f6f 32%, #4d4d4d 64%);
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(0deg, #808080 32%, #5e5e5e 64%);
-      }
-      ::-webkit-scrollbar-track {
-        background: #3c3c3c;
-        border-radius: 5px;
-        box-shadow: inset 0px 0px 8px #1a1a1a;
-      }
-
       > .title {
         font-size: 20px;
         font-weight: 700;
