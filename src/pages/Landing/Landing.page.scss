@@ -3,46 +3,24 @@
   height: 100%;
 
   > .maincontent {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    display: flex;
 
-    .videocont {
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.75);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      justify-content: center;
-      video {
-        position: absolute;
-        width: 100%;
-        height: auto;
+    .title {
+      margin: 10%;
+      width: 40%;
+
+      .primary {
+        font-size: 48px;
       }
-      .overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-
-        .title {
-          text-align: center;
-          font-size: 32px;
-          font-weight: 700;
-          display: inline-block;
-          align-self: flex-end;
-        }
+      .secondary {
+        font-size: 22px;
       }
-    }
-
-    .information {
-      margin-top: 8px;
-      height: 500px;
-      width: 100%;
+      .tertiary {
+        margin-top: 32px;
+        font-size: 12px;
+      }
     }
   }
 }
