@@ -18,38 +18,9 @@ function HomePage() {
 
   const profile = useSelector((state) => state.firebase.profile);
 
-  let notificationContent = "ERROR";
+  let isLoggedIn = true;
   if (!isLoaded(profile) || isEmpty(profile)) {
-    notificationContent = "Loading...";
-  }
-  function NotificationBox() {
-    if (notificationContent === "ERROR") {
-      return (
-        <div className="notificationbox">
-          <div className="title">Notifications</div>
-          <hr className="solidborder" />
-          <div className="maincontent">
-            <ul>
-              <li>
-                <NotificationComponent />
-              </li>
-              <hr className="solidborder border-inset border-darker-2" />
-              <li>
-                <NotificationComponent />
-              </li>
-            </ul>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="notificationbox">
-          <div className="title">Notifications</div>
-          <hr className="solidborder" />
-          <div className="maincontent">{notificationContent}</div>
-        </div>
-      );
-    }
+    isLoggedIn = false;
   }
   /*
   function changeUsername() {
@@ -63,7 +34,25 @@ function HomePage() {
   return (
     <div className="Home">
       <div className="maincontent">
-        <NotificationBox />
+        <div className="notificationbox">
+          <div className="title">Notifications</div>
+          <hr className="solidborder" />
+          <div className="maincontent">
+            {isLoggedIn ? (
+              <ul>
+                <li>
+                  <NotificationComponent />
+                </li>
+                <hr className="solidborder border-inset border-darker-2" />
+                <li>
+                  <NotificationComponent />
+                </li>
+              </ul>
+            ) : (
+              "Loading..."
+            )}
+          </div>
+        </div>
         <div className="friendsbox">
           <div className="title">Friend Activity</div>
           <hr className="solidborder" />
